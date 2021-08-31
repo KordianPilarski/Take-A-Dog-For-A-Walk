@@ -1,9 +1,9 @@
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  color: white;
+  color: #F9F9F9;
   background-color: rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 1px 15px 27px 15px rgba(0, 0, 0, 0.4);
   box-shadow: 1px 15px 27px 15px rgba(0, 0, 0, 0.4);
