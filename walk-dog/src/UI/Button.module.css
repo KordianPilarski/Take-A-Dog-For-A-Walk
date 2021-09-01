@@ -1,0 +1,16 @@
+.button {
+    margin-top: 5%;
+    min-width: 50%;
+    align-self:flex-end;
+    background-color: #ecd888;
+    color: #5a3709;
+    padding: .5rem 1rem;
+    border-radius: 3%;
+    border: 1px dotted #5a3709;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #ceb966;
+}

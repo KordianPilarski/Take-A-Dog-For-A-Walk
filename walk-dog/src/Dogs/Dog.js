@@ -1,4 +1,5 @@
 import styles from "./Dog.module.css";
+import DogForm from "./DogForm";
 
 const Dog = (props) => {
   return (
@@ -10,17 +11,17 @@ const Dog = (props) => {
       ></img>
       <div className={styles.description}>
         <h3>{props.name.charAt(0).toUpperCase() + props.name.slice(1)}</h3>
+
         <div>
-          <h4>About:</h4> {props.description}
-        </div>
-        <div>
+          <h4>About:</h4>
+          <p>{props.description}</p>
           <h4>Dog info:</h4>
           <p>Height: {props.dogInfo.height}</p>
           <p>Weight: {props.dogInfo.weight}</p>
           <p>Life: {props.dogInfo.life}</p>
         </div>
       </div>
-      <div className={styles.form}>Form</div>
+      <DogForm />
     </div>
   );
 };

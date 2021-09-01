@@ -1,9 +1,8 @@
-
 .nav-button{
     background-color: #F5EDC6;
     color: #5a3709;
     padding: .5rem 1rem;
-    border-radius: 3%;
+    border-radius: 8px;
     border: none;
     display: flex;
     justify-content: center;

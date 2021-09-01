@@ -1,0 +1,38 @@
+.form {
+  bottom: 0rem;
+  padding: 5%;
+  background: linear-gradient(to right, #f482a1, #f0bb7c);
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.date > * {
+    margin: 3px 0;
+}
+
+.datePicker {
+  background-color: #f9f9f9;
+}
+
+.button {
+    margin-top: 5%;
+    min-width: 50%;
+    align-self:flex-end;
+    background-color: #ecd888;
+    color: #5a3709;
+    padding: .5rem 1rem;
+    border-radius: 3%;
+    border: 1px dotted #5a3709;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #ceb966;
+}
