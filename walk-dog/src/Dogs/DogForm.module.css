@@ -18,21 +18,23 @@
 
 .datePicker {
   background-color: #f9f9f9;
+  box-shadow: 0 1px 3px -2px #9098A9;
+  cursor: pointer;
 }
 
-.button {
-    margin-top: 5%;
-    min-width: 50%;
-    align-self:flex-end;
-    background-color: #ecd888;
-    color: #5a3709;
-    padding: .5rem 1rem;
-    border-radius: 3%;
-    border: 1px dotted #5a3709;
-    transition: 200ms;
-    cursor: pointer;
+label {
+  padding-left: .3rem;
 }
 
-.button:hover {
-    background-color: #ceb966;
+
+.select{
+  padding: 7px 40px 7px 12px;
+  width: 100%;
+  border: 1px solid #E8EAED;
+  border-radius: 5px;
+  background: #f9f9f9;
+  box-shadow: 0 1px 3px -2px #9098A9;
+  cursor: pointer;
+  font-size: 16px;
 }
+

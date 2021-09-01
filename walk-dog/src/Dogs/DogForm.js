@@ -12,7 +12,7 @@ const DogForm = () => {
         <label htmlFor="datePicker">Choose your date:</label>
         <DateTimePicker className={styles.datePicker} value={date} onChange={setDate} disableClock={true}/>
         <label htmlFor="meetingLength">Meeting length: </label>
-        <select name="meetingLength" id="meetingLength">
+        <select className={styles.select} name="meetingLength" id="meetingLength">
             <option value='30'>30 min</option>
             <option value='60'>60 min</option>
             <option value='120'>120 min</option>

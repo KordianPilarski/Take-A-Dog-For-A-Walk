@@ -10,5 +10,6 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2%;
+  grid-gap: 1.5rem;
+  height: fit-content;
 }

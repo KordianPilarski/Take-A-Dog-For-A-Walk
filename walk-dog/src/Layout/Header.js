@@ -10,7 +10,7 @@ const Header = (props) => {
         <nav className={styles.navigation}>
           <div>List of dogs</div>
           <div> Quotes abuot dogs</div>
-        <HeaderYourWalksButton />
+        <HeaderYourWalksButton onClick={props.onShowWalks}/>
         </nav>
       </header>
       <div className={styles["main-image"]}>

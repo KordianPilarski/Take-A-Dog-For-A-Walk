@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Wrapper from "../UI/Wrapper";
-import { getDogsData } from "../api";
+import { getDogsData } from "../assets/api";
 import Dog from "./Dog";
 import styles from "./DogsToWalk.module.css";
 import Search from "./Search/Search";
@@ -17,7 +17,7 @@ const DogsToWalk = () => {
     getAPIDogs();
   }, []);
 
-  const dogsList = DogsData.slice(0, 10).map((dog) => (
+  const dogsList = DogsData.slice(0, 9).map((dog) => (
     <Dog
       key={dog.id}
       image={dog.image}
