@@ -1,0 +1,16 @@
+.dog {
+    background-color: #F5EDC6;
+    border-radius: 5px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    color: #5a3709;
+}
+
+.image {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.description{
+    padding: 3%;
+}

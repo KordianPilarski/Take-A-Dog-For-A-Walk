@@ -20,6 +20,11 @@
   align-items: center;
 }
 
+.navigation > * {
+  
+  cursor: pointer;
+}
+
 .main-image {
   width: 100%;
   height: 40rem;
