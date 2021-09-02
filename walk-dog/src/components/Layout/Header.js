@@ -1,4 +1,5 @@
-import dogsImage from "../assets/photo-1444212477490-ca407925329e.jpg";
+// import dogsImage from "../assets/photo-1444212477490-ca407925329e.jpg";
+import dogsImage from "../../assets/photo-1444212477490-ca407925329e.jpg";
 import HeaderYourWalksButton from "./HeaderYourWalksButton";
 import styles from "./Header.module.css";
 
@@ -10,7 +11,7 @@ const Header = (props) => {
         <nav className={styles.navigation}>
           <div>List of dogs</div>
           <div> Quotes abuot dogs</div>
-        <HeaderYourWalksButton onClick={props.onShowWalks}/>
+          <HeaderYourWalksButton onClick={props.onShowWalks} />
         </nav>
       </header>
       <div className={styles["main-image"]}>

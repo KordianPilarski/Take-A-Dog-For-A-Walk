@@ -12,12 +12,12 @@ const Search = () => {
             input={{
               id: "name",
               type: "text",
-              placeholder: 'enter name'
+              placeholder: "enter name",
             }}
           />
         </div>
         <div className={styles.category}>
-        <Input
+          <Input
             label="Description"
             input={{
               id: "description",
@@ -26,12 +26,12 @@ const Search = () => {
           />
         </div>
         <div className={styles.category}>
-        <Input
+          <Input
             label="Weight"
             input={{
               id: "weight",
               type: "text",
-              placeholder: 'in pounds'
+              placeholder: "in pounds",
             }}
           />
         </div>

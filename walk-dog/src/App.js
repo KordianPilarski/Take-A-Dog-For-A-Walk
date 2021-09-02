@@ -1,7 +1,8 @@
 import { useState } from "react";
-import Header from "./Layout/Header";
-import Dogs from "./Dogs/Dogs";
-import YourWalks from "./Your walks/YourWalks";
+import Header from "./components/Layout/Header";
+import Dogs from "./components/Dogs/Dogs";
+import YourWalks from "./components/Your walks/YourWalks";
+import WalksProvider from "./store/WalksProvider";
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -13,13 +14,13 @@ function App() {
     setCartIsShown(false);
   };
   return (
-    <>
+    <WalksProvider>
       {cartIsShown && <YourWalks onHideWalks={hideWalksHandler} />}
       <Header onShowWalks={showWalksHandler} />
       <main>
         <Dogs />
       </main>
-    </>
+    </WalksProvider>
   );
 }
 

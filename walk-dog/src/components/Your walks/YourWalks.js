@@ -13,13 +13,13 @@ const YourWalks = (props) => {
           length: "60",
         },
       ].map((dog) => (
-        <li key={dog.id}>Dog: {dog.name} - on {dog.date} for {dog.length} minutes.</li>
+        <li key={dog.id} className={styles.walk}>Dog: {dog.name} - on {dog.date} for {dog.length} minutes.</li>
       ))}
     </ul>
   );
   return (
-    <Modal>
-      <Button class={styles.close} action={props.onHideWalks}>X</Button>
+    <Modal onHideWalks={props.onHideWalks}>
+      <Button class={styles.close} action={props.onHideWalks}>Close</Button>
       <div>Your Walks:</div>
       {walks}
       <Button class={styles.accept}>Lets walk!</Button>
