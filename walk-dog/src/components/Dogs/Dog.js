@@ -1,7 +1,19 @@
+import { useContext } from "react";
 import styles from "./Dog.module.css";
 import DogForm from "./DogForm";
+import WalksContext from "../../store/walks-context";
 
 const Dog = (props) => {
+  const walksCtx = useContext(WalksContext);
+  const adWalkHandler = (walk) => {
+    walksCtx.addWalk({
+      id: props.id,
+      name: props.name,
+      date: walk.date,
+      walkLength: walk.walkLength,
+    });
+  };
+
   return (
     <div className={styles.dog}>
       <img
@@ -21,7 +33,7 @@ const Dog = (props) => {
           <p>Life: {props.dogInfo.life}</p>
         </div>
       </div>
-      <DogForm />
+      <DogForm onAddWalk={adWalkHandler} />
     </div>
   );
 };

@@ -8,6 +8,7 @@
   border-radius: 0.4rem;
   background-color: #f9f9f9;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1rem;
 }
 
 .close {
@@ -27,6 +28,7 @@
 }
 
 .accept {
+  justify-self: flex-end;
   border-radius: 15px;
   border: 1px solid #cfcdcd;
   background: linear-gradient(to left, rgb(131, 243, 131), rgb(60, 202, 60));

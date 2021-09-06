@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Wrapper from "../UI/Wrapper";
-import { getDogsData} from '../../assets/api'
+import { getDogsData } from "../../assets/api";
 import Dog from "./Dog";
 import styles from "./DogsToWalk.module.css";
 import Search from "./Search/Search";
@@ -19,6 +19,7 @@ const DogsToWalk = () => {
 
   const dogsList = DogsData.slice(0, 9).map((dog) => (
     <Dog
+      id={dog.id}
       key={dog.id}
       image={dog.image}
       name={dog.breedName}
@@ -30,7 +31,7 @@ const DogsToWalk = () => {
   return (
     <section className={styles.dogsToWalk}>
       <Wrapper>
-          <Search />
+        <Search />
         <ul>{dogsList}</ul>
       </Wrapper>
     </section>

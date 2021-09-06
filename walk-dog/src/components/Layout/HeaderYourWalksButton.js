@@ -5,9 +5,8 @@ import WalksContext from "../../store/walks-context";
 const HeaderYourWalksButton = (props) => {
   const walksCtx = useContext(WalksContext);
 
-  const numberOfWalks = walksCtx.walks.reduce((curr, walk) => {
-    return curr + walk.amount;
-  }, 0);
+  const numberOfWalks = walksCtx.walks.length;
+
   return (
     <button
       className={styles["nav-button"]}
