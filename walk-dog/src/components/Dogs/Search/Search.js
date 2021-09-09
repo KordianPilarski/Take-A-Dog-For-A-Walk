@@ -3,7 +3,7 @@ import styles from "./Search.module.css";
 
 const Search = () => {
   return (
-    <form className={styles.search}>
+    <form id="search" className={styles.search}>
       <h2>Find a dog by:</h2>
       <div className={styles.options}>
         <div className={styles.category}>

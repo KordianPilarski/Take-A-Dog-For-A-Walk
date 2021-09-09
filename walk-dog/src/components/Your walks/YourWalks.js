@@ -1,17 +1,27 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import Modal from "../UI/Modal";
 import styles from "./YourWalks.module.css";
 import Button from "../UI/Button";
 import WalksContext from "../../store/walks-context";
+import DogWalk from "./DogWalk";
 
 const YourWalks = (props) => {
   const walksCtx = useContext(WalksContext);
+  const walkRemoveHandler = (id) => {
+    walksCtx.removeWalk(id);
+  }
   const walks = (
-    
     <ul className={styles.walks}>
-      {walksCtx.walks.map(walk => {
-        return <li key={walk.id} className={styles.walk}>Dog: {walk.name} on {walk.date[0]} at {walk.date[1]} for {walk.walkLength} minutes.</li>
-      })}
+      {walksCtx.walks.map((walk) => (
+        <DogWalk
+          key={walk.id}
+          id={walk.id}
+          name={walk.name}
+          date={walk.date}
+          walkLength={walk.walkLength}
+          onRemove={walkRemoveHandler.bind(null, walk.id)}
+        />
+      ))}
       {/* {[
         {
           id: "id1",
@@ -31,7 +41,9 @@ const YourWalks = (props) => {
       <Button class={styles.close} action={props.onHideWalks}>
         Close
       </Button>
-      <div><b>Your Walks:</b></div>
+      <div>
+        <b>Your Walks:</b>
+      </div>
       {walksCtx.walks.length === 0 && <p>Please add any walks.</p>}
       {walks}
       <Button class={styles.accept}>Lets walk!</Button>

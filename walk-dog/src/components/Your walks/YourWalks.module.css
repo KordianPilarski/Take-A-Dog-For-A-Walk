@@ -1,17 +1,27 @@
 .walks {
-  list-style: none;
-}
-
-.walk {
-  max-width: 60%;
-  padding: 0.7rem;
-  border-radius: 0.4rem;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  margin-bottom: 1rem;
-}
-
-.close {
+    list-style: none;
+    max-width: 40rem;
+    max-height: 15rem;
+    overflow-y: auto;
+  }
+  
+  .walks::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+  }
+  .walks::-webkit-scrollbar
+  {
+    width: 10px;
+    background-color: #F5F5F5;
+  }
+  .walks::-webkit-scrollbar-thumb
+  {
+    background-color: #5a3709;
+    border: 2px solid #555555;
+  }
+  
+  .close {
   background-color: #5a3709;
   color: #f9f9f9;
   margin-top: 0;
@@ -20,7 +30,7 @@
   position: sticky;
   left: 100%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  border:none;
+  border: none;
 }
 
 .close:hover {

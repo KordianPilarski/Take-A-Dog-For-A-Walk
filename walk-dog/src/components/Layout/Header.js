@@ -9,8 +9,8 @@ const Header = (props) => {
       <header className={styles.header}>
         <h1>Take a Dog For A Walk</h1>
         <nav className={styles.navigation}>
-          <div>List of dogs</div>
-          <div> Quotes abuot dogs</div>
+          <a href="/#search">List of dogs</a>
+          <a href="/#">Quotes abuot dogs</a>
           <HeaderYourWalksButton onClick={props.onShowWalks} />
         </nav>
       </header>

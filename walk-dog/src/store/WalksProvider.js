@@ -6,15 +6,50 @@ const defaultWalksState = {
 };
 
 const walkReducer = (state, action) => {
-  if(action.type === "ADD_WALK"){
-    // console.log('add walk')
-    const updatedWalks = state.walks.concat(action.walk)
+  if (action.type === "ADD_WALK") {
     // console.log(updatedWalks)
-    return {
-      walks: updatedWalks
+    const existingWalkIndex = state.walks.findIndex(
+      (walk) => walk.id === action.walk.id
+    );
+    if (
+      state.walks[existingWalkIndex] &&
+      state.walks[existingWalkIndex].date[0] === action.walk.date[0] &&
+      state.walks[existingWalkIndex].date[1] === action.walk.date[1]
+    ) {
+      return {
+        walks: state.walks,
+      };
+    } else {
+      const updatedWalks = state.walks.concat(action.walk);
+
+      return {
+        walks: updatedWalks,
+      };
     }
+
+    // const existingWalk = state.walks[existingWalkIndex];
+
+    // if (existingWalk) {
+    //   console.log('existingwalk')
+    //   return;
+    // }
   }
-  
+
+  if (action.type === "REMOVE_WALK") {
+    // console.log("usun walk");
+    // const existingWalkIndex = state.walks.findIndex(
+    //   (walk) => walk.id === action.id
+    // );
+    // const existingWalk = state.walks[existingWalkIndex];
+    // console.log(action.id)
+
+    const updatedWalks = state.walks.filter((walk) => {
+      return walk.id !== action.id;
+    });
+
+    return { walks: updatedWalks };
+  }
+
   return defaultWalksState;
 };
 
