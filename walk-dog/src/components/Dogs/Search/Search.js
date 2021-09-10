@@ -1,7 +1,7 @@
 import Input from "../../UI/Input";
 import styles from "./Search.module.css";
 
-const Search = () => {
+const Search = (props) => {
   return (
     <form id="search" className={styles.search}>
       <h2>Find a dog by:</h2>
@@ -12,8 +12,8 @@ const Search = () => {
             input={{
               id: "name",
               type: "text",
-              placeholder: "enter name",
             }}
+            handleChange={props.onSearchChange}
           />
         </div>
         <div className={styles.category}>
@@ -23,6 +23,7 @@ const Search = () => {
               id: "description",
               type: "text",
             }}
+            handleChange={props.onSearchChange}
           />
         </div>
         <div className={styles.category}>
@@ -30,9 +31,9 @@ const Search = () => {
             label="Weight"
             input={{
               id: "weight",
-              type: "text",
-              placeholder: "in pounds",
+              type: "number",
             }}
+            handleChange={props.onSearchChange}
           />
         </div>
       </div>

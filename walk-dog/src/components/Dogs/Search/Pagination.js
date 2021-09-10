@@ -7,7 +7,7 @@ const Pagination = (props) => {
     pageNumbers.push(i);
   }
 
-  console.log(props.totalDogs);
+  // console.log(props.totalDogs);
 
   return (
     <nav>

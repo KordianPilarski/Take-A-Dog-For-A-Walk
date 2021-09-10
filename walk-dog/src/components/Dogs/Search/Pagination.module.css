@@ -6,11 +6,12 @@ nav .pagination {
 }
 
 .item {
-  border: 1px solid rgb(131, 243, 131);
+  border-bottom: 1px solid rgb(131, 243, 131);
+  border-top: 1px solid rgb(131, 243, 131);
   /* background-color: aqua; */
   width: 2rem;
   height: 2rem;
-  border-radius: 0.3rem;
+  /* border-radius: 0.3rem; */
   /* margin: 1rem; */
 }
 .item:hover {

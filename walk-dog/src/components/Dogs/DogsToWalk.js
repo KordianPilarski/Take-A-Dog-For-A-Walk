@@ -11,6 +11,8 @@ const DogsToWalk = () => {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [dogsPerPage] = useState(9);
+  const [filteredDogs, setFilteredDogs] = useState([]);
+  const [searchDog, setSearchDog] = useState("");
 
   useEffect(() => {
     const getAPIDogs = async () => {
@@ -18,16 +20,51 @@ const DogsToWalk = () => {
       const dogs = await getDogsData();
       setDogsData(dogs.data);
       //   console.log(DogsData);
+      setFilteredDogs(dogs.data);
       setLoading(false);
     };
     getAPIDogs();
   }, []);
 
+  const handleSearchChange = (e) => {
+    setSearchDog({ input: e.target.id, val: e.target.value });
+  };
+  // console.log(searchDog);
+
+  useEffect(() => {
+    // console.log("effect")
+    setFilteredDogs(
+      DogsData.filter((dog) => {
+        if (searchDog === "") {
+          return dog;
+        } else if (searchDog.input === "name") {
+          return dog.breedName
+            .toLowerCase()
+            .includes(searchDog.val.toLowerCase());
+        } else if (searchDog.input === "description") {
+          return dog.description
+            .toLowerCase()
+            .includes(searchDog.val.toLowerCase());
+        } else if (searchDog.input === "weight") {
+          const weights = dog.dogInfo.weight.match(/(\d[\d\.]*)/g);
+          if (weights) {
+            return (
+              +searchDog.val >= +weights[0] && +searchDog.val <= +weights[1]
+            );
+          } else {
+            return dog;
+          }
+        }
+        return dog;
+      })
+    );
+  }, [searchDog, DogsData]);
+
   const idOfLastDog = currentPage * dogsPerPage;
   const idOfFirstDog = idOfLastDog - dogsPerPage;
-  const currentDogs = DogsData.slice(idOfFirstDog, idOfLastDog);
+  const currentDogs = filteredDogs.slice(idOfFirstDog, idOfLastDog);
 
-  const paginate = (pageNumber) => setCurrentPage(pageNumber)
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const dogsList = currentDogs.map((dog) => (
     <Dog
@@ -43,9 +80,9 @@ const DogsToWalk = () => {
   return (
     <section className={styles.dogsToWalk}>
       <Wrapper>
-        <Search />
+        <Search onSearchChange={handleSearchChange} />
         <Pagination
-          totalDogs={DogsData.length}
+          totalDogs={filteredDogs.length}
           dogsPerPage={dogsPerPage}
           paginate={paginate}
         />
