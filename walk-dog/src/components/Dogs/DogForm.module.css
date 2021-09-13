@@ -7,34 +7,49 @@
 }
 
 .date {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
 
 .date > * {
-    margin: 3px 0;
+  margin: 3px 0;
 }
 
 .datePicker {
   background-color: #f9f9f9;
-  box-shadow: 0 1px 3px -2px #9098A9;
+  box-shadow: 0 1px 3px -2px #9098a9;
   cursor: pointer;
 }
 
 label {
-  padding-left: .3rem;
+  padding-left: 0.3rem;
 }
 
-
-.select{
+.select {
   padding: 7px 40px 7px 12px;
   width: 100%;
-  border: 1px solid #E8EAED;
+  border: 1px solid #e8eaed;
   border-radius: 5px;
   background: #f9f9f9;
-  box-shadow: 0 1px 3px -2px #9098A9;
+  box-shadow: 0 1px 3px -2px #9098a9;
   cursor: pointer;
   font-size: 16px;
+  margin-bottom: 1rem;
 }
 
+.add-walk {
+  background: #ffffff;
+  min-width: 50%;
+  align-self: flex-end;
+  color: #5a3709;
+  padding: 0.5rem 1rem;
+  border-radius: 3%;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.add-walk:hover{
+  background: #e9e3e3;
+  transform: scale(1.05);
+}

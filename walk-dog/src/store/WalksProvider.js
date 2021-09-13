@@ -44,7 +44,7 @@ const walkReducer = (state, action) => {
     // console.log(action.id)
 
     const updatedWalks = state.walks.filter((walk) => {
-      return walk.id !== action.id;
+      return walk.date !== action.date || walk.id !== action.id;
     });
 
     return { walks: updatedWalks };
@@ -62,8 +62,8 @@ const WalksProvider = (props) => {
     dispatchWalks({ type: "ADD_WALK", walk: walk });
   };
 
-  const removeWalk = (id) => {
-    dispatchWalks({ type: "REMOVE_WALK", id: id });
+  const removeWalk = (id, date) => {
+    dispatchWalks({ type: "REMOVE_WALK", id: id, date: date });
   };
 
   const walksContext = {

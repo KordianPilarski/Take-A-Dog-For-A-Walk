@@ -7,8 +7,8 @@ import DogWalk from "./DogWalk";
 
 const YourWalks = (props) => {
   const walksCtx = useContext(WalksContext);
-  const walkRemoveHandler = (id) => {
-    walksCtx.removeWalk(id);
+  const walkRemoveHandler = (id, date) => {
+    walksCtx.removeWalk(id, date);
   }
   const walks = (
     <ul className={styles.walks}>
@@ -19,7 +19,7 @@ const YourWalks = (props) => {
           name={walk.name}
           date={walk.date}
           walkLength={walk.walkLength}
-          onRemove={walkRemoveHandler.bind(null, walk.id)}
+          onRemove={walkRemoveHandler.bind(null, walk.id, walk.date)}
         />
       ))}
       {/* {[

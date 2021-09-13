@@ -33,31 +33,38 @@ const DogsToWalk = () => {
 
   useEffect(() => {
     // console.log("effect")
-    setFilteredDogs(
-      DogsData.filter((dog) => {
-        if (searchDog === "") {
-          return dog;
-        } else if (searchDog.input === "name") {
-          return dog.breedName
-            .toLowerCase()
-            .includes(searchDog.val.toLowerCase());
-        } else if (searchDog.input === "description") {
-          return dog.description
-            .toLowerCase()
-            .includes(searchDog.val.toLowerCase());
-        } else if (searchDog.input === "weight") {
-          const weights = dog.dogInfo.weight.match(/(\d[\d\.]*)/g);
-          if (weights) {
-            return (
-              +searchDog.val >= +weights[0] && +searchDog.val <= +weights[1]
-            );
-          } else {
-            return dog;
-          }
-        }
+    const filterDogs = DogsData.filter((dog) => {
+      if (searchDog === "") {
         return dog;
-      })
-    );
+      } else if (searchDog.input === "name") {
+        return dog.breedName
+          .toLowerCase()
+          .includes(searchDog.val.toLowerCase());
+      } else if (searchDog.input === "description") {
+        return dog.description
+          .toLowerCase()
+          .includes(searchDog.val.toLowerCase());
+      } else if (searchDog.input === "weight") {
+        const weights = dog.dogInfo.weight.match(/(\d[\d]*)/g);
+        if (weights) {
+          if(+searchDog.val === 0){
+            setFilteredDogs(DogsData)
+          } else {
+            return +searchDog.val >= +weights[0] && +searchDog.val <= +weights[1];
+
+          }
+        } else {
+          setFilteredDogs(DogsData);
+        }
+      }
+      return dog;
+    });
+    setFilteredDogs(filterDogs);
+
+    return () => {
+      setFilteredDogs(DogsData);
+      setCurrentPage(1);
+    };
   }, [searchDog, DogsData]);
 
   const idOfLastDog = currentPage * dogsPerPage;

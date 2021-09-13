@@ -45,7 +45,7 @@ const DogForm = (props) => {
           <option value="120">120 min</option>
         </select>
       </div>
-      <Button type="submit">Add a walk</Button>
+      <Button type="submit" class={styles['add-walk']}>Add a walk</Button>
     </form>
   );
 };
