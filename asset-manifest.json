@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Take-A-Dog-For-A-Walk/static/css/main.0d3cc1fa.chunk.css",
+    "main.js": "/Take-A-Dog-For-A-Walk/static/js/main.6e8f64a4.chunk.js",
+    "main.js.map": "/Take-A-Dog-For-A-Walk/static/js/main.6e8f64a4.chunk.js.map",
+    "runtime-main.js": "/Take-A-Dog-For-A-Walk/static/js/runtime-main.65512293.js",
+    "runtime-main.js.map": "/Take-A-Dog-For-A-Walk/static/js/runtime-main.65512293.js.map",
+    "static/css/2.d47d8948.chunk.css": "/Take-A-Dog-For-A-Walk/static/css/2.d47d8948.chunk.css",
+    "static/js/2.712e0490.chunk.js": "/Take-A-Dog-For-A-Walk/static/js/2.712e0490.chunk.js",
+    "static/js/2.712e0490.chunk.js.map": "/Take-A-Dog-For-A-Walk/static/js/2.712e0490.chunk.js.map",
+    "index.html": "/Take-A-Dog-For-A-Walk/index.html",
+    "static/css/2.d47d8948.chunk.css.map": "/Take-A-Dog-For-A-Walk/static/css/2.d47d8948.chunk.css.map",
+    "static/css/main.0d3cc1fa.chunk.css.map": "/Take-A-Dog-For-A-Walk/static/css/main.0d3cc1fa.chunk.css.map",
+    "static/js/2.712e0490.chunk.js.LICENSE.txt": "/Take-A-Dog-For-A-Walk/static/js/2.712e0490.chunk.js.LICENSE.txt",
+    "static/media/photo-1444212477490-ca407925329e.d8a6aff3.jpg": "/Take-A-Dog-For-A-Walk/static/media/photo-1444212477490-ca407925329e.d8a6aff3.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.65512293.js",
+    "static/css/2.d47d8948.chunk.css",
+    "static/js/2.712e0490.chunk.js",
+    "static/css/main.0d3cc1fa.chunk.css",
+    "static/js/main.6e8f64a4.chunk.js"
+  ]
+}
