@@ -1,7 +1,8 @@
 .nav-button {
   background-color: #f5edc6;
   color: #5a3709;
-  padding: 0.5rem 1rem;
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
   border-radius: 8px;
   border: none;
   display: flex;

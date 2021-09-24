@@ -13,3 +13,15 @@
   grid-gap: 1.5rem;
   height: fit-content;
 }
+
+@media (max-width: 1000px) {
+  .dogsToWalk ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .dogsToWalk ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

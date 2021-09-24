@@ -15,7 +15,7 @@ nav .pagination {
   /* margin: 1rem; */
 }
 .item:hover {
-    background-color: rgba(131, 243, 131, .4);
+  background-color: rgba(131, 243, 131, 0.4);
 }
 
 .link {
@@ -28,3 +28,9 @@ nav .pagination {
   justify-content: center;
 }
 
+@media (max-width: 950px) {
+  nav .pagination {
+    width: 60vw;
+    margin: 0 auto 1.5rem auto;
+  }
+}
